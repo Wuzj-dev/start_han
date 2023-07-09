@@ -1,6 +1,7 @@
 package com.han.wechat.doSend;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.template.WxMpTemplateData;
 import me.chanjar.weixin.mp.bean.template.WxMpTemplateMessage;
@@ -17,6 +18,7 @@ import javax.annotation.PostConstruct;
 @AllArgsConstructor
 @Component
 @DependsOn("wxMpServiceConfiguration")
+@Slf4j
 public class WechatSend {
     WxMpService wxMpService;
     @PostConstruct
@@ -30,16 +32,15 @@ public class WechatSend {
                 .templateId(templateId)
                 .url("")
                 .build();
-
         templateMessage.addData(new WxMpTemplateData("keyword1", "value1"));
         templateMessage.addData(new WxMpTemplateData("keyword2", "value1"));
         templateMessage.addData(new WxMpTemplateData("remark", "value1"));
 
         try {
             String s = wxMpService.getTemplateMsgService().sendTemplateMsg(templateMessage);
-            System.out.println(s);
+            log.info("magId",s);
         }catch (Exception e) {
-            System.out.println("err");
+            log.info("magId",e);
         }
     }
 
