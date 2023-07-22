@@ -1,5 +1,6 @@
 package com.han.wechat.doSend;
 
+import com.han.allcommom.util.GsonUtil;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.mp.api.WxMpService;
@@ -43,6 +44,5 @@ public class WechatSend {
             log.info("magId",e);
         }
     }
-
 
 }
