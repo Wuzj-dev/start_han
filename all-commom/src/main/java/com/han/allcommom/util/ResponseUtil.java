@@ -41,6 +41,10 @@ public class ResponseUtil {
     public static Response err(String code , String msg){
         return response(code,msg,nullObj);
     }
-    
+
+    public static Response err(ResponseEnums err,Object data){
+        return response(err.code,err.msg,data);
+    }
+
 
 }

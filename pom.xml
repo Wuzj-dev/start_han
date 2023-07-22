@@ -32,8 +32,14 @@
 
 
 	<modules>
- 		<module>WeChat</module>
+
 		<module>all-commom</module>
+<!--		<module>authService</module>-->
+		<module>WeChat</module>
+		<module>model-all</module>
+		<module>model-all/model-user</module>
+		<module>model-all/model-wechat</module>
+<!--		<module>model-user</module>-->
 	</modules>
 
 
@@ -58,36 +64,6 @@
 
 
 		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>${google.guava.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>${commons-lang3.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>${google.gson.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct</artifactId>
-			<version>1.5.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct-processor</artifactId>
-			<version>1.5.0.Final</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.12</version>
@@ -99,6 +75,20 @@
 	<dependencyManagement>
 		<dependencies>
 
+<!--			model-->
+			<dependency>
+				<groupId>com.han.modeluser</groupId>
+				<artifactId>model-user</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.han.modelwechat</groupId>
+				<artifactId>model-wechat</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+<!--			 项目模块-->
 			<dependency>
 				<groupId>com.han</groupId>
 				<artifactId>all-commom</artifactId>
@@ -143,6 +133,35 @@
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
 				<version>8.0.21</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${google.guava.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>${google.gson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct</artifactId>
+				<version>1.5.0.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-processor</artifactId>
+				<version>1.5.0.Final</version>
 			</dependency>
 
 		</dependencies>

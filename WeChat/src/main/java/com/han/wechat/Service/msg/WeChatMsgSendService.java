@@ -1,5 +1,6 @@
 package com.han.wechat.Service.msg;
 
+import com.han.allcommom.ret.Response;
 import me.chanjar.weixin.common.error.WxErrorException;
 
 /**
@@ -11,7 +12,7 @@ public interface WeChatMsgSendService {
 
 
 
-    String doSend(String jsonStr) throws WxErrorException;
+    Response doSend(String jsonStr) throws WxErrorException;
 
 
 }

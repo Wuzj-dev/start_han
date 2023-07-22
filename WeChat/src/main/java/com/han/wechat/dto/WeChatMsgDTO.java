@@ -8,7 +8,7 @@ import lombok.Data;
  * @DateTime: 2023/7/21 21:58
  **/
 @Data
-public class WeChatMsgDTO {
+public class WeChatMsgDTO  {
 
 
 

@@ -11,7 +11,8 @@ import lombok.AllArgsConstructor;
 public enum ResponseEnums {
 
     SUCCESS("200","success"),
-    COMMON_ERR("1001","通用错误");
+    COMMON_ERR("1001","通用错误"),
+    WECHAT_SEND_ERR("2012","微信发送错误");
 
     public final String code;
 
