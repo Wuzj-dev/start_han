@@ -1,4 +1,4 @@
-package com.han.userdb.db.entity.DO;
+package com.han.allcommom.muis;
 
 import java.io.Serializable;
 import java.sql.Timestamp;

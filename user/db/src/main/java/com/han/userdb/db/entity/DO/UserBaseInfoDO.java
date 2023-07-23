@@ -12,7 +12,7 @@ public class UserBaseInfoDO extends AbstractBaseInfoDO {
     /**
      *
      */
-    private String userName;
+    private String account;
 
     /**
      * 昵称

@@ -8,7 +8,7 @@
 		<version>2.2.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.han.user</groupId>
+	<groupId>com.han.start</groupId>
 	<artifactId>start</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>start</name>
@@ -39,7 +39,13 @@
 		<module>model-all</module>
 		<module>model-all/model-user</module>
 		<module>model-all/model-wechat</module>
-<!--		<module>model-user</module>-->
+
+		<module>user</module>
+		<module>user/db</module>
+		<module>user/api</module>
+		<module>user/common</module>
+		<module>user/db</module>
+
 	</modules>
 
 

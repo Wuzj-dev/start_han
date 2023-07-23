@@ -43,6 +43,11 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.han</groupId>
+            <artifactId>all-commom</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
