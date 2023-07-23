@@ -1,9 +1,10 @@
-package com.han.wechat.Service.msg;
+package com.han.wechat.doSend.impl;
 
 import com.han.allcommom.ret.Response;
 import com.han.allcommom.ret.ResponseEnums;
 import com.han.allcommom.util.GsonUtil;
 import com.han.allcommom.util.ResponseUtil;
+import com.han.wechat.doSend.WeChatMsgSendService;
 import lombok.AllArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpService;
@@ -23,16 +24,16 @@ public class WechatMsgSendServiceImpl implements WeChatMsgSendService {
     WxMpService wxMpService;
 
     @Override
-    public Response doSend(String jsonStr) throws WxErrorException {
+    public Response doSendWechatTemplateMsg(String jsonStr) {
         try {
             WxMpTemplateMessage wxMpTemplateMessage = GsonUtil.fromJson(jsonStr, WxMpTemplateMessage.class);
             String msgId = wxMpService.getTemplateMsgService().sendTemplateMsg(wxMpTemplateMessage);
             return ResponseUtil.success(msgId);
-        }catch (Exception e){
-             if (e instanceof WxErrorException) {
-                 return ResponseUtil.err(ResponseEnums.WECHAT_SEND_ERR,((WxErrorException)e).getError());
-             }
-            return ResponseUtil.err(ResponseEnums.WECHAT_SEND_ERR,e.getMessage());
+        } catch (Exception e) {
+            if (e instanceof WxErrorException) {
+                return ResponseUtil.err(ResponseEnums.WECHAT_SEND_ERR, ((WxErrorException) e).getError());
+            }
+            return ResponseUtil.err(ResponseEnums.WECHAT_SEND_ERR, e.getMessage());
         }
 
     }
