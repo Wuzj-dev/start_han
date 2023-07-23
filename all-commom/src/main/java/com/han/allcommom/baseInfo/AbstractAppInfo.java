@@ -14,5 +14,9 @@ public class AbstractAppInfo {
 
     public String applicationName;
 
+    public String secret;
+
+
+
 
 }
