@@ -1,7 +1,6 @@
 package com.han.wechat.doSend;
 
 import com.han.allcommom.ret.Response;
-import me.chanjar.weixin.common.error.WxErrorException;
 
 /**
  * @Author: Wuj
@@ -16,8 +15,8 @@ public interface WeChatMsgSendService {
      *
      * @param jsonStr
      * @return Response ：WxMpTemplateMessage JSON Str
-     * true: date == msgId
-     * false: 发送错误消息
+     *                  true: date == msgId
+     *                  false: 发送错误消息
      */
     Response doSendWechatTemplateMsg(String jsonStr);
 

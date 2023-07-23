@@ -10,8 +10,33 @@ import lombok.Data;
 @Data
 public class JwtUseInfo {
 
-    public String userId;
+    private String userId;
 
+    /**
+     *
+     */
+    private String account;
 
+    /**
+     * 昵称
+     */
+    private String nick;
+
+    /**
+     * 图片
+     */
+    private String icon;
+
+    /**
+     * 手机号
+     */
+    private String phoneNumber;
+
+    private String email;
+
+    /**
+     * 微信 OPENID
+     */
+    private String weChatOpenId;
 
 }
