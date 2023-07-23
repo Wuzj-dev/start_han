@@ -1,10 +1,13 @@
 package com.han.user.api.dto;
 
+import lombok.Data;
+
 /**
  * @Author: Wuj
  * @Description:
  * @DateTime: 2023/4/30 23:16
  **/
+@Data
 public class UserDTO {
 
     private String userId;
