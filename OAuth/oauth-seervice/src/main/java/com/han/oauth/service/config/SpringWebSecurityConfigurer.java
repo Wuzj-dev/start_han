@@ -19,18 +19,12 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
  * @DateTime: 2023/7/23 16:47
  **/
 @Configuration
-
 public class SpringWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
-
     @Override
-
     @Bean
-
     public AuthenticationManager authenticationManagerBean() throws Exception {
-
         return super.authenticationManagerBean();
-
     }
 
 
@@ -38,9 +32,7 @@ public class SpringWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     @Override
     @Bean
     public UserDetailsService userDetailsServiceBean() throws Exception {
-
         return super.userDetailsServiceBean();
-
     }
 
 
@@ -57,6 +49,5 @@ public class SpringWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .withUser("spring_admin")
                 .password("{noop}password2")
                 .roles("USER", "ADMIN");
-
     }
 }
