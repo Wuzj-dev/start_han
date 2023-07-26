@@ -14,7 +14,7 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface UserConvert {
 
-    public static UserConvert userConvert =  Mappers.getMapper(UserConvert.class);
+    UserConvert userConvert =  Mappers.getMapper(UserConvert.class);
 
     UserDTO toUserDTO(UserBaseInfoDO userBaseInfoDO);
 

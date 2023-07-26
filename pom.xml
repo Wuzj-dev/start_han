@@ -8,11 +8,11 @@
 		<version>2.2.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.han.user</groupId>
-	<artifactId>user</artifactId>
+	<groupId>com.han.start</groupId>
+	<artifactId>start</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>user</name>
-	<description>user</description>
+	<name>start</name>
+	<description>start</description>
 	<packaging>pom</packaging>
 
 
@@ -22,6 +22,7 @@
 		<user.commom.version>0.0.1-SNAPSHOT</user.commom.version>
 		<han.userdb.version>0.0.1-SNAPSHOT</han.userdb.version>
 		<han.userService.version>0.0.1-SNAPSHOT</han.userService.version>
+		<all-commom.version>0.0.1-SNAPSHOT</all-commom.version>
 
 
 		<google.guava.version>19.0</google.guava.version>
@@ -31,10 +32,22 @@
 
 
 	<modules>
-		<module>api</module>
-		<module>common</module>
-		<module>db</module>
-		<module>service</module>
+
+		<module>all-commom</module>
+<!--		<module>authService</module>-->
+		<module>WeChat</module>
+		<module>model-all</module>
+		<module>model-all/model-user</module>
+		<module>model-all/model-wechat</module>
+
+		<module>user</module>
+		<module>user/db</module>
+		<module>user/api</module>
+		<module>user/common</module>
+		<module>user/db</module>
+
+		<module>OAuth</module>
+		<module>OAuth/oauth-seervice</module>
 	</modules>
 
 
@@ -59,39 +72,6 @@
 
 
 		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-<!--			<version>19.0</version>-->
-			<version>${google.guava.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-<!--			<version>3.9</version>-->
-			<version>${commons-lang3.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-<!--			<version>2.2.4</version>-->
-			<version>${google.gson.version}</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct</artifactId>
-			<version>1.5.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct-processor</artifactId>
-			<version>1.5.0.Final</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.12</version>
@@ -103,10 +83,43 @@
 	<dependencyManagement>
 		<dependencies>
 
+<!--			model-->
+			<dependency>
+				<groupId>com.han.modeluser</groupId>
+				<artifactId>model-user</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.han.modelwechat</groupId>
+				<artifactId>model-wechat</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+<!--			 项目模块-->
+			<dependency>
+				<groupId>com.han</groupId>
+				<artifactId>all-commom</artifactId>
+				<version>${all-commom.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>com.han.user.api</groupId>
 				<artifactId>api</artifactId>
 				<version>${user.api.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>Oauth-Start</groupId>
+				<artifactId>OAuth</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>oauthSrvice</groupId>
+				<artifactId>oauth-service</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 
 
@@ -142,6 +155,43 @@
 				<artifactId>mysql-connector-java</artifactId>
 				<version>8.0.21</version>
 			</dependency>
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${google.guava.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>${google.gson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct</artifactId>
+				<version>1.5.0.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-processor</artifactId>
+				<version>1.5.0.Final</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>2.7.7</version>
+			</dependency>
+
 
 		</dependencies>
 	</dependencyManagement>

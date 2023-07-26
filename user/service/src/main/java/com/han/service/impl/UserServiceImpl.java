@@ -22,7 +22,6 @@ public class UserServiceImpl implements UserService {
     @Resource
     UserBaseInfoMapper userBaseInfoMapper;
 
-
     @Override
     public UserDTO UserByPhone(String phoneNum) {
         UserBaseInfoDO userBaseInfoDO = userBaseInfoMapper.userBaseInfoByPhone(phoneNum);
