@@ -14,49 +14,56 @@ import org.slf4j.Logger;
  **/
 public class LoggUtil {
 
-
     public static void debug(Logger log, String content) {
-        LoggUtil.print(log,"DEBUG",content,null);
+        LoggUtil.debug(log, content, null);
+    }
+
+
+    public static void debug(Logger log, String content, NameValue... nameValues) {
+        LoggUtil.print(log, "DEBUG", content, nameValues);
     }
 
     public static void info(Logger log, String content) {
-        LoggUtil.print(log,"INFO",content,null);
+        LoggUtil.info(log, content, null);
+    }
+
+    public static void info(Logger log, String content, NameValue... nameValues) {
+        LoggUtil.print(log, "INFO", content, nameValues);
     }
 
     public static void err(Logger log, String content) {
-        LoggUtil.print(log,"INFO",content,null);
+        LoggUtil.err(log, content, null);
+    }
+
+    public static void err(Logger log, String content, NameValue... nameValues) {
+        LoggUtil.print(log, "INFO", content, nameValues);
     }
 
     public static void warn(Logger log, String content) {
-        LoggUtil.print(log,"INFO",content,null);
+        LoggUtil.warn(log, content, null);
     }
 
-    public static void print(Logger log, String logType, String content, NameValue... nameValues){
+    public static void warn(Logger log, String content, NameValue... nameValues) {
+        LoggUtil.print(log, "INFO", content, nameValues);
+    }
+
+    public static void print(Logger log, String logType, String content, NameValue... nameValues) {
         String nameValueStr = "";
-        if (nameValues != null){
+        if (nameValues != null) {
             nameValueStr = GsonUtil.toStr(nameValues);
         }
         nameValueStr = content + "| " + nameValueStr;
 
-        if ("INFO".equals(logType)){
+        if ("INFO".equals(logType)) {
             log.info(nameValueStr);
-        }
-        else if ("DEBUG".equals(logType)){
+        } else if ("DEBUG".equals(logType)) {
             log.debug(nameValueStr);
-        }
-        else if ("ERR".equals(logType)){
+        } else if ("ERR".equals(logType)) {
             log.error(nameValueStr);
-        }
-        else if ("WARN".equals(logType)){
+        } else if ("WARN".equals(logType)) {
             log.warn(nameValueStr);
         }
-
-
-
     }
-
-
-
 
 
 }
