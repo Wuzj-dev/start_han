@@ -36,7 +36,10 @@
 		<module>all-commom</module>
 <!--		<module>authService</module>-->
 		<module>WeChat</module>
+		<module>route</module>
+
 		<module>model-all</module>
+		<module>model-all/model-base</module>
 		<module>model-all/model-user</module>
 		<module>model-all/model-wechat</module>
 
@@ -77,6 +80,11 @@
 			<version>1.18.12</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.15</version>
+		</dependency>
 
 	</dependencies>
 
@@ -87,6 +95,12 @@
 			<dependency>
 				<groupId>com.han.modeluser</groupId>
 				<artifactId>model-user</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.han.model.base</groupId>
+				<artifactId>model-base</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 

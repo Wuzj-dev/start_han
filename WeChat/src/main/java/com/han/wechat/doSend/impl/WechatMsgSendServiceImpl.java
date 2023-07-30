@@ -11,7 +11,6 @@ import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.template.WxMpTemplateMessage;
 import org.springframework.stereotype.Component;
 
-
 /**
  * @Author: Wuj
  * @Description: TODO

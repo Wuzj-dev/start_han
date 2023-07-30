@@ -7,25 +7,34 @@
         <artifactId>model-all</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.han.modelwechat</groupId>
-    <artifactId>model-wechat</artifactId>
+    <groupId>com.han.model.base</groupId>
+    <artifactId>model-base</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>model-wechat</name>
-    <description>model-wechat</description>
+    <name>model-base</name>
+    <description>model-base</description>
     <properties>
         <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.han.model.base</groupId>
-            <artifactId>model-base</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

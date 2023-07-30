@@ -13,7 +13,7 @@
     <name>model-user</name>
     <description>model-user</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -26,6 +26,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.han.model.base</groupId>
+            <artifactId>model-base</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
