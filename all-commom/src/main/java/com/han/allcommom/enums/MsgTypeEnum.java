@@ -9,15 +9,16 @@ import lombok.Getter;
  * @DateTime: 2023/7/30 14:26
  **/
 @AllArgsConstructor
-public enum MsgTypeEnum implements EnumI{
+public enum MsgTypeEnum implements EnumI {
+
+    /**
+     * 消息枚举类(wxchat 类型)
+     */
+    WX_CHAT_("WX_CHAT_", "微信模版消息");
 
 
-    WX_CHAT_("WX_CHAT_","微信模版消息");
-
-
-
-    public   final String code;
-    public   final String desc;
+    public final String code;
+    public final String desc;
 
     @Override
     public String code() {

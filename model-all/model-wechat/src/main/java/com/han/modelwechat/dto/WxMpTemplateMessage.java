@@ -11,7 +11,7 @@ import java.util.List;
  * @Description: TODO
  * @DateTime: 2023/7/23 01:14
  **/
-public class WxMpTemplateMessage implements Serializable {
+public class WxMpTemplateMessage implements TemplateMsgI, Serializable {
     private static final long serialVersionUID = 5063374783759519418L;
     private String toUser;
     private String templateId;
