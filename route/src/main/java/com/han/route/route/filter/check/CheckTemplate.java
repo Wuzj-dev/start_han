@@ -15,19 +15,16 @@ public class CheckTemplate {
 
     /**
      * 校验模版是否存在
-     * @param templateId 消息模版ID
-     * @param appId  应用Id
+     *
+     * @param templateId  消息模版ID
+     * @param appId       应用Id
      * @param msgTypeEnum 消息类型
      * @return the Boolean
      */
-    public void checkTemplate(String templateId, String appId, MsgTypeEnum msgTypeEnum){
+    public void checkTemplate(String appId, String templateId, MsgTypeEnum msgTypeEnum) {
 
 
     }
-
-
-
-
 
 
 }

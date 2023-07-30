@@ -16,9 +16,6 @@ public class WxTemplateFacade {
 
 
         return new WxMpTemplateMessage();
-
-
-
     }
 
 }
