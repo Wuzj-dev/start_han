@@ -1,5 +1,6 @@
 package com.han.allcommom.muis;
 
+import com.han.allcommom.enums.EnumI;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -17,13 +18,16 @@ public class NameValue {
 
     public final String value;
 
-    public static NameValue builder(String name, String value){
+    public static NameValue builder(String name, String value) {
         return new NameValue(name, value);
     }
 
-     public String toString(){
-         List<Integer> emptyList = Lists.newArrayList();
-        return name+"|"+value+" ";
-     }
+    public static NameValue builder(EnumI e) {
+        return new NameValue(e.code(), e.desc());
+    }
+
+    public String toString() {
+        return name + "|" + value + " ";
+    }
 
 }

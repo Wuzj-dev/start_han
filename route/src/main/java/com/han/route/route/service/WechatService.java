@@ -1,5 +1,6 @@
 package com.han.route.route.service;
 
+import com.han.modelwechat.dto.WxMpTemplateMessage;
 import com.han.modelwechat.dto.request.WxChatMsgSendReq;
 
 /**
@@ -9,7 +10,7 @@ import com.han.modelwechat.dto.request.WxChatMsgSendReq;
  **/
 public interface WechatService {
 
-    String sendMsg(WxChatMsgSendReq wxChatMsgSendReq);
+    String sendMsg(WxChatMsgSendReq wxChatMsgSendReq, WxMpTemplateMessage wxMpTemplateMessage) ;
 
 
 
