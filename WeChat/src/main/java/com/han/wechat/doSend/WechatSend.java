@@ -31,7 +31,7 @@ public class WechatSend {
         WxMpTemplateMessage templateMessage = WxMpTemplateMessage.builder()
                 .toUser(openId)
                 .templateId(templateId)
-                .url("")
+                .url("https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index")
                 .build();
         templateMessage.addData(new WxMpTemplateData("keyword1", "value1"));
         templateMessage.addData(new WxMpTemplateData("keyword2", "value1"));

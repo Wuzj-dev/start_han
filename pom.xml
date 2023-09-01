@@ -50,6 +50,17 @@
 		<module>user/common</module>
 		<module>user/db</module>
 
+		<module>facade-all</module>
+		<module>facade-all/user-facade</module>
+		<module>facade-all/msg-template-facade</module>
+
+
+		<module>fegin-start</module>
+		<module>fegin-start/template-fegin</module>
+		<module>fegin-start/user-fegin</module>
+
+		<module>email</module>
+
 		<module>OAuth</module>
 		<module>OAuth/oauth-seervice</module>
 	</modules>
@@ -139,6 +150,58 @@
 			<dependency>
 				<groupId>com.han.modelwechat</groupId>
 				<artifactId>model-wechat</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+
+<!--			dacade-->
+			<dependency>
+				<groupId>com.han</groupId>
+				<artifactId>facade-all</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.han.facade</groupId>
+				<artifactId>user-facade</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.han.template</groupId>
+				<artifactId>msg-template-facade</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.han.facade.base</groupId>
+				<artifactId>bace-facade</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.han.email</groupId>
+				<artifactId>email</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+<!--			fegin-start-->
+
+			<dependency>
+				<groupId>com.han.fegin</groupId>
+				<artifactId>fegin-start</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.han</groupId>
+				<artifactId>template-fegin</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.han</groupId>
+				<artifactId>user-fegin</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 

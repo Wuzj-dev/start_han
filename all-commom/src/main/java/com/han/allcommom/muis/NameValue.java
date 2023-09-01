@@ -16,9 +16,9 @@ public class NameValue {
 
     public final String name;
 
-    public final String value;
+    public final Object value;
 
-    public static NameValue builder(String name, String value) {
+    public static NameValue builder(String name, Object value) {
         return new NameValue(name, value);
     }
 

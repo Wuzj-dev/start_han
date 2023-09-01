@@ -1,6 +1,8 @@
 package com.han.modelwechat.dto;
 
 import com.google.gson.Gson;
+import com.han.allcommom.baseInfo.TemplateMsgI;
+import com.han.model.base.util.GsonUtil;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -90,6 +92,11 @@ public class WxMpTemplateMessage implements TemplateMsgI, Serializable {
         this.url = url;
         this.miniProgram = miniProgram;
         this.data = data;
+    }
+
+    @Override
+    public String toStr() {
+        return GsonUtil.toStr(this);
     }
 
     public static class WxMpTemplateMessageBuilder {

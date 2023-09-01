@@ -25,6 +25,10 @@
             <groupId>com.han.model.base</groupId>
             <artifactId>model-base</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.han</groupId>
+            <artifactId>all-commom</artifactId>
+        </dependency>
     </dependencies>
 
 

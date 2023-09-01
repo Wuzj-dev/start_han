@@ -14,7 +14,8 @@ import lombok.Data;
 public enum ExceptionEnumI implements EnumI {
 
     NO_TEMPLATE("2001", "该模板不存在"),
-    NO_MSG_TYPE("2002", "消息类型不存在");
+    NO_MSG_TYPE("2002", "消息类型不存在"),
+    GET_USEID_ERR("2003","获取发送ID 失败");
 
     public final String code;
 

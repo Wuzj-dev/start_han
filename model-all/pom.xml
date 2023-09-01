@@ -21,6 +21,11 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.han</groupId>
+            <artifactId>all-commom</artifactId>
+        </dependency>
     </dependencies>
 
 
