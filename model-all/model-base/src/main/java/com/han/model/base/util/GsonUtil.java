@@ -36,10 +36,7 @@ public class GsonUtil {
         return gson().fromJson(jsonStr, classOfT);
     }
 
-    public static <T> List<T> toSet(String jsonStr, Class<T> classOfT) {
-        Type type = new TypeToken<HashSet<T>>(){}.getType();
-        return gson().fromJson(jsonStr, type);
-    }
+
 
     public static <T> T toMap(String jsonStr, Class<T> classOfT) {
         return gson().fromJson(jsonStr, classOfT);
@@ -51,36 +48,36 @@ public class GsonUtil {
         return Arrays.asList(arr);
     }
 
-    public static void main(String[] args) {
-
-        List<Ce> list = new ArrayList<>();
-
-        HashMap<String, Ce> objectObjectHashMap = Maps.newHashMap();
-        for (int i = 0; i < 3; i++) {
-            list.add(new Ce(String.valueOf(i),String.valueOf(i+2)));
-            objectObjectHashMap.put(String.valueOf(i),new Ce(String.valueOf(i),String.valueOf(i+2)));
-        }
-
-        String listStr = toStr(list);
-        String listMap = toStr(objectObjectHashMap);
-
-
-        HashMap<String, Ce> as = toMap(listMap, objectObjectHashMap.getClass());
-
-        String mapStr = toStr(objectObjectHashMap);
-
-        List<Ce> rs=new ArrayList<Ce>();
-
-        Type type = new TypeToken<ArrayList<Ce>>() {}.getType();
-
-        rs=gson().fromJson(listStr, type);
-
-
-
-        System.out.println("---");
-
-
-    }
+//    public static void main(String[] args) {
+//
+//        List<Ce> list = new ArrayList<>();
+//
+//        HashMap<String, Ce> objectObjectHashMap = Maps.newHashMap();
+//        for (int i = 0; i < 3; i++) {
+//            list.add(new Ce(String.valueOf(i),String.valueOf(i+2)));
+//            objectObjectHashMap.put(String.valueOf(i),new Ce(String.valueOf(i),String.valueOf(i+2)));
+//        }
+//
+//        String listStr = toStr(list);
+//        String listMap = toStr(objectObjectHashMap);
+//
+//
+//        HashMap<String, Ce> as = toMap(listMap, objectObjectHashMap.getClass());
+//
+//        String mapStr = toStr(objectObjectHashMap);
+//
+//        List<Ce> rs=new ArrayList<Ce>();
+//
+//        Type type = new TypeToken<ArrayList<Ce>>() {}.getType();
+//
+//        rs=gson().fromJson(listStr, type);
+//
+//
+//
+//        System.out.println("---");
+//
+//
+//    }
 
     @AllArgsConstructor
     @Data

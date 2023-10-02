@@ -1,0 +1,18 @@
+{
+
+  "mappings": {
+    "dynamic_templates": [
+
+      {
+        "string_to_text_standard": {
+          "match_mapping_type": "string",
+          "match":   "text_*_standard*",
+          "mapping": {
+            "type": "text",
+            "analyzer": "standard"
+          }
+        }
+      }
+    ]
+  }
+}
